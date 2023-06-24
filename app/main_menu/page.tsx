@@ -13,35 +13,42 @@ export default function MainMenu() {
   const [playModal, setPlayModal] = useState(false);
   const [optionsModal, setOptionsModal] = useState(false);
   const [instructionModal, setInstructionModal] = useState(false);
-  const handlePlayClick = () => {
-    console.log("play button clicked");
-    setPlayModal(!playModal);
+  const closeModals = () => {
+    setPlayModal(false);
     setOptionsModal(false);
     setInstructionModal(false);
   };
-  const handleOptionsClick = () => {
-    console.log("options button clicked");
-    setOptionsModal(!optionsModal);
-    setInstructionModal(false);
-    setPlayModal(false);
-  };
-  const handleInstructionsClick = () => {
-    console.log("instruction button clicked");
-    setInstructionModal(!instructionModal);
-    setOptionsModal(false);
-    setPlayModal(false);
-  };
-  const handleQuitClick = () => {
-    console.log("quit button clicked");
-    router.push("/");
+  const handleClick = (action: string) => {
+    switch (action) {
+      case "play":
+        closeModals();
+        setPlayModal(!playModal);
+        break;
+      case "options":
+        closeModals();
+        setOptionsModal(!optionsModal);
+        break;
+      case "instructions":
+        closeModals();
+        setInstructionModal(!instructionModal);
+        break;
+      case "quit":
+        router.replace("/");
+        break;
+      default:
+        break;
+    }
   };
   return (
     <main>
       <div className=" flex">
-        <Button title="Play" onClick={handlePlayClick} />
-        <Button title="Options" onClick={handleOptionsClick} />
-        <Button title="Instructions" onClick={handleInstructionsClick} />
-        <Button title="Quit" onClick={handleQuitClick} />
+        <Button title="Play" onClick={() => handleClick("play")} />
+        <Button title="Options" onClick={() => handleClick("options")} />
+        <Button
+          title="Instructions"
+          onClick={() => handleClick("instructions")}
+        />
+        <Button title="Quit" onClick={() => handleClick("quit")} />
       </div>
       <div className="flex text-center justify-center">
         <div>

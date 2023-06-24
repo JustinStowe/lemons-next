@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../Button";
-export default function rentModal() {
+export default function RentModal() {
   //need carousel of cards with information and an image.
   //on selection of location, need to update player_screen with selection
   const handleClick = (action: string) => {

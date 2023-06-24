@@ -1,99 +1,101 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-export default function statsModal() {
+export default function StatsModal() {
   //need to make use states for data.
+  //have zustand make a call to the database to update zustand data
+  //give this page most up to date data to be rendered
   return (
     <div>
       <h2>Your Stats</h2>
       <div>
         <table>
-          <tr>
-            <th>Day</th>
-            <th>Last</th>
-            <th>Best</th>
-          </tr>
-          <tr>
-            <th>Revenue</th>
-            <th>
+          <thead>
+            <tbody>Day</tbody>
+            <tbody>Last</tbody>
+            <tbody>Best</tbody>
+          </thead>
+          <thead>
+            <thead>Revenue</thead>
+            <tbody>
               <span></span>
-            </th>
-            <th>
+            </tbody>
+            <thead>
               <span></span>
-            </th>
-          </tr>
-          <tr>
-            <th>Stock Used</th>
-            <th>
+            </thead>
+          </thead>
+          <thead>
+            <tbody>Stock Used</tbody>
+            <tbody>
               <span></span>
-            </th>
-            <th>
+            </tbody>
+            <tbody>
               <span></span>
-            </th>
-          </tr>
-          <tr>
-            <th>Stock Lost</th>
-            <th>
+            </tbody>
+          </thead>
+          <thead>
+            <tbody>Stock Lost</tbody>
+            <tbody>
               <span></span>
-            </th>
-            <th>
+            </tbody>
+            <tbody>
               <span></span>
-            </th>
-          </tr>
-          <tr>
-            <th>Gross Profit</th>
-            <th>
+            </tbody>
+          </thead>
+          <thead>
+            <tbody>Gross Profit</tbody>
+            <tbody>
               <span></span>
-            </th>
-            <th>
+            </tbody>
+            <tbody>
               <span></span>
-            </th>
-          </tr>
-          <tr>
-            <th>Gross margin</th>
-            <th>
+            </tbody>
+          </thead>
+          <thead>
+            <tbody>Gross margin</tbody>
+            <tbody>
               <span></span>
-            </th>
-            <th>
+            </tbody>
+            <tbody>
               <span></span>
-            </th>
-          </tr>
-          <tr>
-            <th>Rents</th>
-            <th>
+            </tbody>
+          </thead>
+          <thead>
+            <tbody>Rents</tbody>
+            <tbody>
               <span></span>
-            </th>
-            <th>
+            </tbody>
+            <tbody>
               <span></span>
-            </th>
-          </tr>
-          <tr>
-            <th>Marketing</th>
-            <th>
+            </tbody>
+          </thead>
+          <thead>
+            <tbody>Marketing</tbody>
+            <tbody>
               <span></span>
-            </th>
-            <th>
+            </tbody>
+            <tbody>
               <span></span>
-            </th>
-          </tr>
-          <tr>
-            <th>Total Expense</th>
-            <th>
+            </tbody>
+          </thead>
+          <thead>
+            <tbody>Total Expense</tbody>
+            <tbody>
               <span></span>
-            </th>
-            <th>
+            </tbody>
+            <tbody>
               <span></span>
-            </th>
-          </tr>
-          <tr>
-            <th>Earnings</th>
-            <th>
+            </tbody>
+          </thead>
+          <thead>
+            <tbody>Earnings</tbody>
+            <tbody>
               <span></span>
-            </th>
-            <th>
+            </tbody>
+            <tbody>
               <span></span>
-            </th>
-          </tr>
+            </tbody>
+          </thead>
         </table>
       </div>
     </div>

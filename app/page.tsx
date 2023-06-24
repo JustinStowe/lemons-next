@@ -3,9 +3,15 @@ import Button from "./components/Button";
 import { useRouter } from "next/navigation";
 export default function HomePage() {
   const router = useRouter();
-  const handleClick = () => {
-    console.log("Start button clicked");
-    router.replace("/main_menu");
+  const handleClick = (action: string) => {
+    switch (action) {
+      case "start":
+        console.log("start button clicked");
+        router.replace("/main_menu");
+        break;
+      default:
+        break;
+    }
   };
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -50,7 +56,7 @@ export default function HomePage() {
           machines, and employees.
         </p>
       </section>
-      <Button title="Start Game" OnClick={handleClick} />
+      <Button title="Start Game" onClick={() => handleClick("start")} />
     </main>
   );
 }
