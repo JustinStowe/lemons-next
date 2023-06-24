@@ -38,10 +38,10 @@ export default function MainMenu() {
   return (
     <main>
       <div className=" flex">
-        <Button title="Play" OnClick={handlePlayClick} />
-        <Button title="Options" OnClick={handleOptionsClick} />
-        <Button title="Instructions" OnClick={handleInstructionsClick} />
-        <Button title="Quit" OnClick={handleQuitClick} />
+        <Button title="Play" onClick={handlePlayClick} />
+        <Button title="Options" onClick={handleOptionsClick} />
+        <Button title="Instructions" onClick={handleInstructionsClick} />
+        <Button title="Quit" onClick={handleQuitClick} />
       </div>
       <div className="flex text-center justify-center">
         <div>
