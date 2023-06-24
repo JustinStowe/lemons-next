@@ -1,6 +1,8 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 
 export default function statsModal() {
+  //need to make use states for data.
   return (
     <div>
       <h2>Your Stats</h2>

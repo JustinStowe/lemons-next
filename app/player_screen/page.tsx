@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Button from "../components/Button";
 
 export default function PlayerScreen() {
+  //should use zustand to track player inventory state.
   const [statsModal, setStatsModal] = useState(false);
   const [rentModal, setRentModal] = useState(false);
   const [upgradeModal, setUpgradeModal] = useState(false);
