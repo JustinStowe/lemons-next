@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Neighborhood",
+    "image": "./public/images/Neighborhood.png",
+    "rent": 0,
+    "info": "In front of your parents house is the perfect place to start selling lemonade, and it doesn't cost a penny in rent!",
+    "people": 10,
+    "popularity": 5,
+    "maxPrice": 0.5,
+    "targetLemons": 3,
+    "targetSugar": 3,
+    "targetIce": 2
+  },
+  {
+    "name": "Park",
+    "image": "./public/images/park.png",
+    "rent": 5,
+    "info": "A lemonade stand at the park? Great Idea! Many people play and exercise at the park and would enjoy relieving their thirst with lemonade.",
+    "people": 20,
+    "popularity": 0,
+    "maxPrice": 0.75,
+    "targetLemons": 4,
+    "targetSugar": 3,
+    "targetIce": 2
+  },
+  {
+    "name": "Down Town",
+    "image": "./public/images/downTown.png",
+    "rent": 15,
+    "info": "There is always people and tourists here bustling around and would appreciate refreshing lemonade",
+    "people": 40,
+    "popularity": 0,
+    "maxPrice": 1.0,
+    "targetLemons": 3,
+    "targetSugar": 4,
+    "targetIce": 2
+  },
+  {
+    "name": "Beach",
+    "image": "./public/images/beach.png",
+    "rent": 30,
+    "info": "What could go better together than having fun at the beach and being able to enjoy refreshing lemonade",
+    "people": 120,
+    "popularity": 0,
+    "maxPrice": 1.25,
+    "targetLemons": 4,
+    "targetSugar": 4,
+    "targetIce": 3
+  },
+  {
+    "name": "Hexa-Stadium",
+    "image": "./public/images/hexastadium.png",
+    "rent": 100,
+    "info": "You better bring your A-game to this game, the masses of fans will want something to wash down those hotdogs!",
+    "people": 800,
+    "popularity": 0,
+    "maxPrice": 1.5,
+    "targetLemons": 2,
+    "targetSugar": 2,
+    "targetIce": 2
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Wooden Stand",
+    "cost": 0,
+    "lemonCapacity": 30,
+    "sugarCapacity": 30,
+    "iceCapacity": 90,
+    "cupsCapacity": 50,
+    "rep": 0
+  },
+  {
+    "name": "Cool Stand ",
+    "cost": 299,
+    "lemonCapacity": 40,
+    "sugarCapacity": 40,
+    "iceCapacity": 160,
+    "cupsCapacity": 75,
+    "rep": 2
+  },
+  {
+    "name": "Pavilion",
+    "cost": 999,
+    "lemonCapacity": 60,
+    "sugarCapacity": 60,
+    "iceCapacity": 230,
+    "cupsCapacity": 100,
+    "rep": 3
+  },
+  {
+    "name": "Lemonade House",
+    "cost": 999,
+    "lemonCapacity": 60,
+    "sugarCapacity": 60,
+    "iceCapacity": 230,
+    "cupsCapacity": 100,
+    "rep": 3
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Timmy",
+    "cost": 0,
+    "payrate": 1,
+    "bonus": 0.5
+  },
+  {
+    "name": "Bobby",
+    "cost": 20,
+    "payrate": 10,
+    "bonus": 1
+  },
+  {
+    "name": "Jennifer",
+    "cost": 100,
+    "payrate": 50,
+    "bonus": 5
+  },
+  {
+    "name": "Ron Popeil",
+    "cost": 200,
+    "payrate": 100,
+    "bonus": 20
+  },
+  {
+    "name": "Dale Carnegie",
+    "cost": 1000,
+    "payrate": 500,
+    "bonus": 100
+  }
+]

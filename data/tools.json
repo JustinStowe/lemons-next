@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Umbrella",
+    "cost": 99,
+    "bonus": 5
+  },
+  {
+    "name": "Ice Machine",
+    "cost": 99,
+    "bonus": 1
+  },
+  {
+    "name": "Boom-Box",
+    "cost": 149,
+    "bonus": 2
+  },
+  {
+    "name": "Juicer",
+    "cost": 199,
+    "bonus": 10
+  },
+  {
+    "name": "Cash Register",
+    "cost": 350,
+    "bonus": 20
+  },
+  {
+    "name": "Fridge",
+    "cost": 800,
+    "bonus": 1
+  }
+]
