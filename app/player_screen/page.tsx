@@ -8,14 +8,16 @@ import MarketingModal from "../components/modals/MarketingModal";
 import SuppliesModal from "../components/modals/SuppliesModal";
 import RentModal from "../components/modals/rentModal";
 import StatsModal from "../components/modals/statsModal";
+import RecipeModal from "../components/modals/RecipeModal";
 export default function PlayerScreen() {
   //should use zustand to track player inventory state.
   const router = useRouter();
-  const [statsModal, setStatsModal] = useState(false);
+  const [statsModal, setStatsModal] = useState(true);
   const [rentModal, setRentModal] = useState(false);
   const [upgradeModal, setUpgradeModal] = useState(false);
   const [staffModal, setStaffModal] = useState(false);
   const [marketingModal, setMarketingModal] = useState(false);
+  const [recipeModal, setRecipeModal] = useState(false);
   const [suppliesModal, setSuppliesModal] = useState(false);
 
   const closeModals = () => {
@@ -24,6 +26,7 @@ export default function PlayerScreen() {
     setUpgradeModal(false);
     setStaffModal(false);
     setMarketingModal(false);
+    setRecipeModal(false);
     setSuppliesModal(false);
   };
   const handleClick = (action: string) => {
@@ -48,6 +51,10 @@ export default function PlayerScreen() {
         closeModals();
         setMarketingModal(!marketingModal);
         break;
+      case "recipe":
+        closeModals();
+        setRecipeModal(!recipeModal);
+        break;
       case "supplies":
         closeModals();
         setSuppliesModal(!suppliesModal);
@@ -68,14 +75,29 @@ export default function PlayerScreen() {
 
   return (
     <main>
-      <div>
-        <Button title="stats" onClick={() => handleClick("stats")} />
-        <Button title="rent" onClick={() => handleClick("rent")} />
-        <Button title="upgrades" onClick={() => handleClick("upgrades")} />
-        <Button title="staff" onClick={() => handleClick("staff")} />
-        <Button title="marketing" onClick={() => handleClick("marketing")} />
-        <Button title="supplies" onClick={() => handleClick("supplies")} />
-      </div>
+      <section className="flex justify-between">
+        <div>
+          <Button title="stats" onClick={() => handleClick("stats")} />
+          <Button title="rent" onClick={() => handleClick("rent")} />
+          <Button title="upgrades" onClick={() => handleClick("upgrades")} />
+          <Button title="staff" onClick={() => handleClick("staff")} />
+          <Button title="marketing" onClick={() => handleClick("marketing")} />
+          <Button title="recipe" onClick={() => handleClick("recipe")} />
+          <Button title="supplies" onClick={() => handleClick("supplies")} />
+        </div>
+        <div className="">
+          <h1>
+            Year: <span id="year">0</span> Month: <span>0</span> Day:{" "}
+            <span>0</span>{" "}
+          </h1>
+          <h2>
+            Outside Temp: <span>Nan</span>
+          </h2>
+          <h2>
+            Current Weather: <span>Nan</span>
+          </h2>
+        </div>
+      </section>
       <section>
         <div>
           {statsModal ? <StatsModal /> : null}
@@ -83,6 +105,7 @@ export default function PlayerScreen() {
           {upgradeModal ? <UpgradesModal /> : null}
           {staffModal ? <StaffModal /> : null}
           {marketingModal ? <MarketingModal /> : null}
+          {recipeModal ? <RecipeModal /> : null}
           {suppliesModal ? <SuppliesModal /> : null}
         </div>
       </section>
