@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-type LocalState = {
+type LocaleState = {
   name: string;
   rent: number;
   info: string;
@@ -12,7 +12,7 @@ type LocalState = {
   targetIce: number;
 };
 
-export const useLocaleState = create<LocalState>((set) => ({
+export const useLocaleState = create<LocaleState>((set) => ({
   name: "",
   rent: 0,
   info: "",

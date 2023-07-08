@@ -4,23 +4,29 @@ type PlayerState = {
   money: number;
   locale: object;
   lemonStand: object;
-  lemons: number;
-  sugar: number;
-  cups: number;
-  ice: number;
+  lemonsStock: number;
+  sugarStock: number;
+  cupsStock: number;
+  iceStock: number;
   tools: [];
   staff: [];
   marketing: [];
+  recipeLemons: number;
+  recipeSugar: number;
+  recipeIce: number;
 };
 
 export const usePlayerState = create<PlayerState>((set) => ({
   money: 0,
   locale: {},
   lemonStand: {},
-  lemons: 0,
-  sugar: 0,
-  cups: 0,
-  ice: 0,
+  lemonsStock: 0,
+  sugarStock: 0,
+  cupsStock: 0,
+  iceStock: 0,
+  recipeLemons: 0,
+  recipeSugar: 0,
+  recipeIce: 0,
   tools: [],
   staff: [],
   marketing: [],

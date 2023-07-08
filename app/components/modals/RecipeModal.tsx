@@ -1,11 +1,13 @@
 "use client";
 import React, { useState } from "react";
 import Button from "../Button";
+import { usePlayerState } from "@/app/zustandStores/playerStore";
 export default function RecipeModal() {
   const [lemons, setLemons] = useState(0);
   const [sugar, setSugar] = useState(0);
   const [ice, setIce] = useState(0);
   const [cupPrice, setCupPrice] = useState(0.0);
+  const { recipeLemons, recipeSugar, recipeIce } = usePlayerState();
 
   const handleClick = (action: string) => {
     switch (action) {

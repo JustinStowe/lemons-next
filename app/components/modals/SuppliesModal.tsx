@@ -1,12 +1,14 @@
 "use client";
 import React, { useState } from "react";
 import Button from "../Button";
+import { usePlayerState } from "@/app/zustandStores/playerStore";
 
 export default function SuppliesModal() {
   const [lemons, setLemons] = useState(0);
   const [sugar, setSugar] = useState(0);
   const [ice, setIce] = useState(0);
   const [cups, setCups] = useState(0);
+  const { lemonsStock, sugarStock, iceStock, cupsStock } = usePlayerState();
 
   const handleClick = (action: string) => {
     switch (action) {
