@@ -46,19 +46,21 @@ export default function RecipeModal() {
           setCupPrice(cupPrice - 0.1);
         } else {
           alert(
-            "I am sure your lemonade is so bad that you have to pay people to drink it"
+            "I am sure your lemonade is not so bad that you have to pay people to drink it"
           );
         }
         break;
       case "plus":
         setCupPrice(cupPrice + 0.1);
         break;
+      default:
+        break;
     }
   };
 
   return (
     <div>
-      <h1>Adjust your recipe</h1>
+      <h1>Adjust your recipe (per pitcher)</h1>
       <section>
         <h2>Lemons</h2>
         <div>
@@ -88,6 +90,9 @@ export default function RecipeModal() {
           <Button title="plus" onClick={() => handleClick("plus")} />
         </div>
       </section>
+      <div className="flex justify-center">
+        <Button title="submit" onClick={() => handleClick("submit")} />
+      </div>
     </div>
   );
 }
