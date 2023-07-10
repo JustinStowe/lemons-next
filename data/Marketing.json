@@ -1,0 +1,27 @@
+[
+  {
+    "name": "flyer",
+    "cost": 1,
+    "bonus": 1
+  },
+  {
+    "name": "social media",
+    "cost": 5,
+    "bonus": 2
+  },
+  {
+    "name": "newspaper",
+    "cost": 5,
+    "bonus": 2
+  },
+  {
+    "name": "radio",
+    "cost": 10,
+    "bonus": 3
+  },
+  {
+    "name": "TV",
+    "cost": 20,
+    "bonus": 4
+  }
+]
