@@ -17,7 +17,7 @@ type PlayerState = {
 };
 
 export const usePlayerState = create<PlayerState>((set) => ({
-  money: 0,
+  money: 20,
   locale: {},
   lemonStand: {},
   lemonsStock: 0,
