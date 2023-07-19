@@ -5,9 +5,9 @@ export default function HomePage() {
   const router = useRouter();
   const handleClick = (action: string) => {
     switch (action) {
-      case "start":
+      case "sign in":
         console.log("start button clicked");
-        router.replace("/main_menu");
+        router.replace("/sign-in");
         break;
       default:
         break;
@@ -56,7 +56,7 @@ export default function HomePage() {
           machines, and employees.
         </p>
       </section>
-      <Button title="Start Game" onClick={() => handleClick("start")} />
+      <Button title="Sign in" onClick={() => handleClick("sign in")} />
     </main>
   );
 }
