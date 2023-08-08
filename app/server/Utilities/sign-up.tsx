@@ -1,24 +1,21 @@
-import React, { useState } from "react";
-import { useRouter } from "next/navigation";
-import { usePlayerState } from "../zustandStores/playerStore";
+"use client";
+import { useState } from "react";
+import { useRouter } from "next/navigation"; // Import from "next/router" instead of "next/navigation"
+import { usePlayerState } from "@/app/zustandStores/playerStore";
+import { IFormData } from "@/app/@types/global";
 
-interface credentials {
-  email: string;
-  password: string;
-}
-export function Signup() {
+export function SignUpForm() {
   const router = useRouter();
-  // const { userSignUp } = usePlayerState();
-  const [formData, setFormData] = useState({
-    name: "",
+  const { userSignUp } = usePlayerState();
+
+  const [formData, setFormData] = useState<IFormData>({
     email: "",
     password: "",
     confirm: "",
     error: "",
   });
-  const [error, setError] = useState("");
 
-  const handleChange = (evt: any) => {
+  const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,
       [evt.target.name]: evt.target.value,
@@ -26,21 +23,19 @@ export function Signup() {
     });
   };
 
-  const handleSubmit = async (evt: any) => {
+  const handleSubmit = async (evt: React.FormEvent<HTMLFormElement>) => {
     evt.preventDefault();
     try {
-      const { error, confirm, ...data } = formData;
-      console.log("submitted form data:", data);
-      // const user = await userSignUp(data);
-      router.replace("/main_menu");
+      const { error, confirm, email, password } = formData;
+      const data = { email, password };
+      const user = await userSignUp(data);
+      router.replace("/player_screen");
+      return user;
     } catch (error) {
-      console.error("sign-up error:", error);
-      setFormData({ ...formData, error: "sign up failed" });
+      console.error("create user error:", error);
     }
   };
-
   const disable = formData.password !== formData.confirm;
-
   return (
     <div>
       <div>
@@ -49,14 +44,6 @@ export function Signup() {
           autoComplete="off"
           onSubmit={handleSubmit}
         >
-          <label>Name</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
           <label>Email</label>
           <input
             type="email"
